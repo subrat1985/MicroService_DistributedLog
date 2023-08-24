@@ -18,26 +18,15 @@ public class CustController {
     CustomerService customerService;
     @GetMapping("/customer/{fName}")
     public Customer getCustomerById(@PathVariable("fName") String fName){
-        Customer customerById = customerService.getCustomerById(fName);
+        Customer customerById = customerService.getCustomerByName(fName);
         return customerById;
 
     }
-    @GetMapping("/customer")
+    @GetMapping("/customers")
     public List<Customer> getAllCustomer(){
         List<Customer> customerList  = customerService.getAllCustomer();
         return customerList;
 
     }
-    @GetMapping("/card")
-    public List<Card> getAllCards(){
-        List<Card> cardList  = customerService.getAllCard();
-        return cardList;
 
-    }
-    @GetMapping("/card/{cNumber}")
-    public Card getCardById(@PathVariable("cNumber") String cNumber){
-        Card cardById = customerService.getCardById(cNumber);
-        return cardById;
-
-    }
 }

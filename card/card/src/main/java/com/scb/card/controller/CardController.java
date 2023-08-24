@@ -20,16 +20,6 @@ import java.util.List;
 public class CardController {
     @Autowired
     CardService cardService;
-
-    @GetMapping("{fName}")
-    public Customer getByCustName(@PathVariable("fName") String fName) {
-        return cardService.getCustomerByName(fName);
-        }
-    @GetMapping("/customers")
-    public List<Customer> getAllCustomer() {
-
-        return cardService.getAllCustomer();
-    }
     @GetMapping("card/{cNumber}")
     public Card getCardByNo(@PathVariable("cNumber") String cNumber) {
         return cardService.getCardByNo(cNumber);
