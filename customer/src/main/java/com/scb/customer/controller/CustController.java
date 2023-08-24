@@ -1,8 +1,5 @@
 package com.scb.customer.controller;
 
-import brave.Span;
-import brave.Tracer;
-import com.scb.customer.model.Card;
 import com.scb.customer.model.Customer;
 import com.scb.customer.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;

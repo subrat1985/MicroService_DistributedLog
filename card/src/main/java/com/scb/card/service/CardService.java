@@ -1,9 +1,6 @@
 package com.scb.card.service;
 
-import brave.Span;
-import brave.Tracer;
 import com.scb.card.model.Card;
-import com.scb.card.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
